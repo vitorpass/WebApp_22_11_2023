@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebApp_22_11_2023.Models.Inventario>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id_cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_maquina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data_aquisicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.preco_unitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observacoes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_cliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_maquina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data_aquisicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.preco_unitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observacoes)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id_inventario">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id_inventario">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id_inventario">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApp_22_11_2023.Models.CadMaquinas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome_maquina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipo_maquina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status_maquina)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome_maquina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo_maquina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status_maquina)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id_maquina">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id_maquina">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id_maquina">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
