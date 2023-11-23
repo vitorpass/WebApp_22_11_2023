@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<label>ID Clientes</label>
+<label>ID Cliente</label>
 <select name="id_cliente" class="form-control">
     @foreach (var item in Model.clientes)
     {
@@ -13,13 +13,54 @@
     }
 </select>
 
-<label>ID Maquinas</label>
+<label>ID Maquina</label>
 <select name="id_maquina" class="form-control">
     @foreach (var item in Model.maquinas)
     {
         <option value="@item.id_maquina">@item.nome_maquina</option>
     }
 </select>
+
+<label>Email</label>
+<select name="email" class="form-control">
+    @foreach (var item in Model.clientes)
+    {
+        <option value="@item.email">@item.email</option>
+    }
+</select>
+
+<label>Telefone</label>
+<select name="telefone" class="form-control">
+    @foreach (var item in Model.clientes)
+    {
+        <option value="@item.telefone">@item.telefone</option>
+    }
+</select>
+
+<label>Nome da Maquina</label>
+<select name="nome_maquina" class="form-control">
+    @foreach (var item in Model.maquinas)
+    {
+        <option value="@item.nome_maquina">@item.nome_maquina</option>
+    }
+</select>
+
+<label>Tipo de Maquina</label>
+<select name="tipo_maquina" class="form-control">
+    @foreach (var item in Model.maquinas)
+    {
+        <option value="@item.tipo_maquina">@item.tipo_maquina</option>
+    }
+</select>
+
+<label>Status da Maquina</label>
+<select name="status_maquina" class="form-control">
+    @foreach (var item in Model.maquinas)
+    {
+        <option value="@item.status_maquina">@item.status_maquina</option>
+    }
+</select>
+
 <hr />
 <div class="row">
     <div class="col-md-4">

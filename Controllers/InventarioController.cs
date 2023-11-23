@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -52,6 +51,7 @@ namespace WebApp_22_11_2023.Controllers
             InventarioModel model = new();
             model.clientes = _context.CadClientes.ToList();
             model.maquinas = _context.CadMaquinas.ToList();
+            model.inventario = _context.Inventario.ToList();
             return View(model);
         }
 

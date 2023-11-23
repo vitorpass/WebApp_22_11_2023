@@ -20,3 +20,63 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Estilo geral para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Estilo específico para tabelas */
+.table-header {
+    background-color: #333;
+    color: #fff;
+}
+
+.table-even {
+    background-color: #f9f9f9;
+}
+
+.table-odd {
+    background-color: #fff;
+}
+
+/* Estilo específico para a tabela CadProdutos */
+#CadProdutos th {
+    background-color: #007B5E;
+    color: #fff;
+}
+
+#CadProdutos .highlight {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Estilo específico para a tabela InventarioSoftwares */
+#InventarioSoftwares th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+#InventarioSoftwares .highlight {
+    background-color: #28a745;
+    color: #fff;
+}
+
+footer,p {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
